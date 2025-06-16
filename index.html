@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--
+       - primary meta tag 
+       -->
+
+		<title>SoulHub - The Ultimate Platform for African Creatives</title>
+		<meta
+			name="title"
+			content="SoulHub is a platform designed to empower African creatives by providing them with the tools and resources they need to succeed in the digital age."
+		/>
+		<meta
+			name="description"
+			content="SoulHub is a platform designed to empower African creatives by providing them with the tools and resources they need to succeed in the digital age."
+		/>
+
+		<!-- 
+      - favicon
+       -->
+		<link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
+
+		<!-- 
+      - custom styles
+       -->
+
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- 
+      - google font link
+       -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- -preload images-->
+	</head>
+
+	<body>
+		<!-- #HEADER -->
+
+		<header class="header" data-header>
+			<div class="container">
+				<a href="#" class="logo">
+					<img
+						src="images/logo.svg"
+						weight="162"
+						height="50"
+						alt="SoulHub Logo"
+					/>
+				</a>
+
+				<nav class="navbar" data-navbar>
+					<div class="wrapper">
+						<a href="#" class="logo">
+							<img
+								src="images/logo.svg"
+								width="162"
+								height="50"
+								alt="SoulHub Logo"
+							/>
+						</a>
+
+						<button
+							class="nav-close-btn"
+							aria-label="close menu"
+							data-nav-toggler
+						>
+							<ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+						</button>
+					</div>
+
+					<ul class="navbar-list">
+						<li class="navbar-item">
+							<a href="#home" class="navbar-link" data-nav-link>Home</a>
+						</li>
+
+						<li class="navbar-item">
+							<a href="#about" class="navbar-link" data-nav-link>About</a>
+						</li>
+
+						<li class="navbar-item">
+							<a href="#courses" class="navbar-link" data-nav-link>Courses</a>
+						</li>
+
+						<li class="navbar-item">
+							<a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+						</li>
+
+						<li class="navbar-item">
+							<a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header-actions">
+					<button
+						class="header-action-btn"
+						aria-label="toggle search"
+						title="Search"
+					>
+						<ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+					</button>
+
+					<button class="header-action-btn" aria-label="cart" title="Cart">
+						<ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+
+						<span class="btn-badge">0</span>
+					</button>
+
+					<a href="#" class="btn has-badge">
+						<span class="span">Try for Free</span>
+
+						<ion-icon
+							name="arrow-forward-outline"
+							aria-hidden="true"
+						></ion-icon>
+					</a>
+
+					<button
+						class="header-action-btn"
+						aria-label="open menu"
+						data-nav-toggler=""
+					>
+						<ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+					</button>
+				</div>
+
+				<div class="overlay" data-nav-toggler data-overlay></div>
+			</div>
+		</header>
+
+		<!-- -custom js link -->
+
+		<script src="script.js" defer></script>
+
+		<!-- ionicon -->
+
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+	</body>
+</html>
