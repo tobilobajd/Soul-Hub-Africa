@@ -70,7 +70,7 @@
 
 	/* 
    *radius
-    */
+ */
 
 	--radius-pill: 500px;
 	--radius-circle: 50%;
@@ -184,8 +184,130 @@ body {
 
 /* -----REUSED STYLE----- */
 
+/* 
+ * Reused styles for the Soul Hub Africa project
+ * This file contains all the styles that are reused throughout the project
+ */
+
 .container {
 	padding-inline: 15px;
+}
+
+.section {
+	padding-block: var(--section-padding);
+}
+
+.shape {
+	position: absolute;
+	display: none;
+}
+
+.has-bg-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.h1,
+.h2,
+.h3 {
+	color: var(--eerie-black-1);
+	font-family: var(--ff-league_spartan);
+	line-height: 1;
+}
+
+.h1,
+.h2 {
+	font-weight: var(--fw-600);
+}
+
+.h1 {
+	font-size: var(--fs-1);
+}
+
+.h2 {
+	font-size: var(--fs-2);
+}
+
+.h3 {
+	font-size: var(--fs-3);
+	font-weight: var(--fw-500);
+}
+
+.section-title {
+	--color: var(--radical-red);
+	text-align: center;
+}
+
+.section-title .span {
+	display: inline-block;
+	color: var(--color);
+}
+
+.btn {
+	background-color: var(--kappel);
+	color: var(--white);
+	font-family: var(--ff-league_spartan);
+	font-size: var(--fs-4);
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	max-width: max-content;
+	padding: 10px 20px;
+	border-radius: var(--radius-5);
+	overflow: hidden;
+}
+
+.has-before,
+.has-after {
+	position: relative;
+	z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+	content: '';
+	position: absolute;
+}
+
+.btn::before {
+	inset: 0;
+	background-image: var(--gradient);
+	z-index: -1;
+	border-radius: inherit;
+	transform: translateX(-100%);
+	transition: var(--transition-2);
+}
+
+.btn:is(:hover, :focus)::before {
+	transform: translateX(0);
+}
+
+.img-holder {
+	aspect-ratio: var(--width) / var(--height);
+	background-color: var(--light-gray);
+	overflow: hidden;
+}
+
+.img-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.section-subtitle {
+	font-size: var(--fs-5);
+	text-transform: uppercase;
+	font-weight: var(--fw-500);
+	letter-spacing: 1px;
+	text-align: center;
+	margin-block-end: 15px;
+}
+
+.section-text {
+	font-size: var(--fs-5);
+	text-align: center;
+	margin-block: 15px 25px;
 }
 
 /* -----#HEADER------ */
@@ -312,4 +434,47 @@ body {
 .overlay.active {
 	opacity: 1;
 	pointer-events: all;
+}
+
+/* ---------#HERO--------- */
+/* 
+ * Hero section styles for the Soul Hub Africa project
+ * This file contains all the hero section styles used throughout the project
+ */
+
+.hero {
+	padding-block-start: calc(var(--section-padding) + 80px);
+}
+
+.hero .container {
+	display: grid;
+	gap: 40px;
+}
+
+.hero-text {
+	color: var(--eerie-black-1);
+	font-size: var(--fs-4);
+	text-align: center;
+	margin-block: 18px 20px;
+}
+
+.hero .btn {
+	margin-inline: auto;
+}
+
+.hero-banner {
+	display: grid;
+	grid-template-columns: 1fr 0.8fr;
+	align-items: flex-start;
+	gap: 30px;
+}
+
+.hero-banner .img-holder.one {
+	border-top-right-radius: 70px;
+	border-bottom-left-radius: 110px;
+}
+
+.hero-banner .img-holder.two {
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 90px;
 }
