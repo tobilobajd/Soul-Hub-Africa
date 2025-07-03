@@ -180,7 +180,7 @@ Top Instructors
 #---------- BLOG ----------#
 
 Latest Articles
-Get News With Eduweb
+
 
 alt = Become A Better Blogger: Content Planning
 
@@ -203,7 +203,7 @@ Lorem Ipsum Dolor Sit Amet Cons Tetur Adipisicing Sed.
 
 #---------- FOOTER ----------#
 
-alt = EduWeb logo
+alt = SoulHub Logo
 
 Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.
 
@@ -244,7 +244,7 @@ Subscribe
 <ion-icon name="logo-youtube"></ion-icon>
 
 
-Copyright 2022 All Rights Reserved by codewithsadee
+Copyright 2022 All Rights Reserved by 
 
 
 
