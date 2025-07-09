@@ -1,29 +1,18 @@
-// backend/routes/index.js
 const express = require('express');
 const router = express.Router();
-const sendMail = require('../utils/sendMail'); // ✅ Make sure this path is correct
 
-// Contact form submission route
-router.post('/api/contact', async (req, res) => {
-	const { name, email, message } = req.body;
+// Newsletter subscription route
+router.post('/api/subscribe', (req, res) => {
+	const { email } = req.body;
 
-	// Validate input
-	if (!name || !email || !message) {
-		return res.status(400).json({ message: 'All fields are required.' });
+	if (!email || !email.includes('@')) {
+		return res.status(400).json({ message: 'Invalid email.' });
 	}
 
-	try {
-		// Send email
-		await sendMail({ name, email, message });
-		return res
-			.status(200)
-			.json({ message: 'Your message was sent successfully!' });
-	} catch (err) {
-		console.error('❌ Email failed:', err);
-		return res
-			.status(500)
-			.json({ message: 'Failed to send message. Try again later.' });
-	}
+	// You can later save to database or send a notification
+	console.log(`✅ New subscriber: ${email}`);
+
+	return res.status(200).json({ message: 'Thank you for subscribing!' });
 });
 
 module.exports = router;

@@ -38,7 +38,7 @@ const closeNavbar = function () {
 addEventOnElem(navLinks, 'click', closeNavbar);
 
 /**
- * header active when scroll down t0 100px
+ * header active when scroll down to 100px
  */
 
 const header = document.querySelector('[data-header]');
@@ -60,15 +60,16 @@ addEventOnElem(window, 'scroll', activeElem);
  * newsletter subscription form submission
  */
 document.addEventListener('DOMContentLoaded', function () {
-	const form = document.getElementById('contact-form');
+	const newsletterForm = document.getElementById('contact-form');
 
-	if (form) {
-		form.addEventListener('submit', async (e) => {
+	if (newsletterForm) {
+		newsletterForm.addEventListener('submit', async (e) => {
 			e.preventDefault();
-			const email = form.email.value.trim();
+
+			const email = newsletterForm.email.value.trim();
 
 			if (!email) {
-				alert('Please enter a valid email.');
+				alert('Please enter a valid email address.');
 				return;
 			}
 
@@ -83,10 +84,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 				const data = await res.json();
 				alert(data.message || 'Subscribed successfully!');
-				form.reset(); // clear input after submit
+				newsletterForm.reset();
 			} catch (err) {
 				console.error(err);
-				alert('Something went wrong. Please try again later.');
+				alert('Failed to subscribe. Try again later.');
 			}
 		});
 	}
